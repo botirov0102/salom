@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #ff6600;
+  --color-brand-blue: #0088ff;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-slate-100;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20;
+  }
+  
+  .glass {
+    @apply backdrop-blur-2xl border border-white/10;
+  }
+}
